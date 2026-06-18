@@ -44,10 +44,10 @@
     "APP_SERVICES_CACHE": "/tmp/services.php",
     "VIEW_COMPILED_PATH": "/tmp",
     "DB_CONNECTION": "pgsql",
-    "DB_HOST": "db.euohjgxpovepmzovtijr.supabase.co",
+    "DB_HOST": "aws-1-ap-southeast-1.pooler.supabase.com",
     "DB_PORT": "5432",
     "DB_DATABASE": "postgres",
-    "DB_USERNAME": "postgres",
+    "DB_USERNAME": "postgres.euohjgxpovepmzovtijr",
     "DB_PASSWORD": "lalalilalilu4you"
   }
 }
