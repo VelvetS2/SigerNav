@@ -17,3 +17,21 @@ Route::view('/about', 'pages.about');
 
 Route::get('/wisatas', [WisataController::class, 'index']);
 Route::get('/wisatas/{wisatum}', [WisataController::class, 'show'])->name('wisatas.show');
+
+Route::get('/db-test', function () {
+    try {
+        \DB::connection()->getPdo();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Database connection is working!',
+            'database' => \DB::connection()->getDatabaseName()
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'status' => 'error',
+            'message' => $e->getMessage(),
+            'code' => $e->getCode(),
+            'trace' => $e->getTraceAsString()
+        ], 500);
+    }
+});
