@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="bg-[#f3efe9] pt-32 pb-16">
+<section class="bg-[#f3efe9] pt-12 pb-16">
 
     <div class="max-w-5xl mx-auto px-6 text-center">
 

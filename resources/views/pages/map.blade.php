@@ -2,18 +2,18 @@
 
 @section('content')
 
-<section class="pt-28 bg-[#fffcf9]">
+<section class="pt-6 bg-[#fffcf9]">
 
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
-        <div class="grid grid-cols-12 gap-6">
+        <div class="grid grid-cols-12 gap-4 sm:gap-6">
 
             <!-- Sidebar -->
-            <div class="col-span-3">
+            <div class="col-span-12 lg:col-span-3 order-2 lg:order-1">
 
-                <div class="bg-white rounded-3xl p-6 shadow-sm">
+                <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-sm">
 
-                    <h2 class="font-bold text-xl mb-4">
+                    <h2 class="font-bold text-lg sm:text-xl mb-4">
                         Eksplorasi Wisata
                     </h2>
 
@@ -21,7 +21,7 @@
                         type="text"
                         id="searchInput"
                         placeholder="Cari destinasi..."
-                        class="w-full border rounded-xl px-4 py-3 mb-4"
+                        class="w-full border rounded-xl px-3 sm:px-4 py-2 sm:py-3 mb-4 text-sm"
                         oninput="filterMarkers()">
 
                     <h3 class="font-semibold mb-3">
@@ -85,11 +85,20 @@
             </div>
 
             <!-- Map -->
-            <div class="col-span-9">
+            <div class="col-span-12 lg:col-span-9 order-1 lg:order-2">
+
+                <!-- Tombol buka filter di atas map (mobile) -->
+                <a href="#sidebarPanel"
+                   class="lg:hidden flex items-center gap-2 w-full mb-3 px-4 py-3 bg-white rounded-2xl shadow-sm text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-900" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                    </svg>
+                    Filter & Eksplorasi Wisata
+                </a>
 
                 <div
                     id="map"
-                    class="h-[80vh] rounded-3xl overflow-hidden shadow-sm">
+                    class="h-[50vh] sm:h-[60vh] lg:h-[80vh] rounded-3xl overflow-hidden shadow-sm">
                 </div>
 
             </div>
